@@ -1,0 +1,3 @@
+﻿  arcanoid.cpp
+C:\Users\admin\source\repos\arcanoid\arcanoid\arcanoid.cpp(83,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  arcanoid.vcxproj -> C:\Users\admin\source\repos\arcanoid\x64\Debug\arcanoid.exe
