@@ -118,16 +118,47 @@ void Game::updateBall() {
 }
 
 bool Game::handleBlockCollision(Block& block) {
-    if (!block.isDestroyed() &&
+    if (!block.isDestroyed() && 
         ball.getGlobalBounds().intersects(block.getBounds())) {
-
-        state.ballVelocity.y = -state.ballVelocity.y;
+        
+        sf::FloatRect ballBounds = ball.getGlobalBounds();
+        sf::FloatRect blockBounds = block.getBounds();
+        
+        float ballCenterX = ballBounds.left + ballBounds.width / 2.0f;
+        float ballCenterY = ballBounds.top + ballBounds.height / 2.0f;
+        float blockCenterX = blockBounds.left + blockBounds.width / 2.0f;
+        float blockCenterY = blockBounds.top + blockBounds.height / 2.0f;
+        
+        float overlapLeft = (ballBounds.left + ballBounds.width) - blockBounds.left;
+        float overlapRight = (blockBounds.left + blockBounds.width) - ballBounds.left;
+        float overlapTop = (ballBounds.top + ballBounds.height) - blockBounds.top;
+        float overlapBottom = (blockBounds.top + blockBounds.height) - ballBounds.top;
+        
+        float minOverlapX = (overlapLeft < overlapRight) ? overlapLeft : overlapRight;
+        float minOverlapY = (overlapTop < overlapBottom) ? overlapTop : overlapBottom;
+        
+        if (minOverlapX < minOverlapY) {
+            if (overlapLeft < overlapRight) {
+                ball.setPosition(blockBounds.left - ballBounds.width, ballBounds.top);
+            } else {
+                ball.setPosition(blockBounds.left + blockBounds.width, ballBounds.top);
+            }
+            state.ballVelocity.x = -state.ballVelocity.x;
+        } else {
+            if (overlapTop < overlapBottom) {
+                ball.setPosition(ballBounds.left, blockBounds.top - ballBounds.height);
+            } else {
+                ball.setPosition(ballBounds.left, blockBounds.top + blockBounds.height);
+            }
+            state.ballVelocity.y = -state.ballVelocity.y;
+        }
+        
         block.onHit(state);
-
+        
         if (block.shouldSpawnBonus()) {
             float bx = block.getPosition().x + Config::BLOCK_WIDTH / 2 - Config::BONUS_RADIUS;
             float by = block.getPosition().y + Config::BLOCK_HEIGHT;
-
+            
             auto bonus = BonusFactory::createRandomBonus(bx, by, rng);
             if (bonus) {
                 bonuses.push_back(std::move(bonus));
