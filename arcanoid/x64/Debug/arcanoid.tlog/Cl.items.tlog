@@ -1,1 +1,5 @@
 C:\Users\admin\source\repos\arcanoid\arcanoid\arcanoid.cpp;C:\Users\admin\source\repos\arcanoid\arcanoid\x64\Debug\arcanoid.obj
+C:\Users\admin\source\repos\arcanoid\arcanoid\Block.cpp;C:\Users\admin\source\repos\arcanoid\arcanoid\x64\Debug\Block.obj
+C:\Users\admin\source\repos\arcanoid\arcanoid\Bonus.cpp;C:\Users\admin\source\repos\arcanoid\arcanoid\x64\Debug\Bonus.obj
+C:\Users\admin\source\repos\arcanoid\arcanoid\BonusFactory.cpp;C:\Users\admin\source\repos\arcanoid\arcanoid\x64\Debug\BonusFactory.obj
+C:\Users\admin\source\repos\arcanoid\arcanoid\Game.cpp;C:\Users\admin\source\repos\arcanoid\arcanoid\x64\Debug\Game.obj
