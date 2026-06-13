@@ -1,0 +1,24 @@
+﻿  arcanoid.cpp
+C:\Users\admin\source\repos\arcanoid\arcanoid\Bonus.hpp(5,7): warning C4099: GameState: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+  (компиляция исходного файла "arcanoid.cpp")
+      C:\Users\admin\source\repos\arcanoid\arcanoid\GameState.hpp(5,8):
+       см. объявление "GameState"
+  
+C:\Users\admin\source\repos\arcanoid\arcanoid\Block.hpp(8,7): warning C4099: GameState: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+  (компиляция исходного файла "arcanoid.cpp")
+      C:\Users\admin\source\repos\arcanoid\arcanoid\GameState.hpp(5,8):
+       см. объявление "GameState"
+  
+  Game.cpp
+C:\Users\admin\source\repos\arcanoid\arcanoid\Bonus.hpp(5,7): warning C4099: GameState: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+  (компиляция исходного файла "Game.cpp")
+      C:\Users\admin\source\repos\arcanoid\arcanoid\GameState.hpp(5,8):
+       см. объявление "GameState"
+  
+C:\Users\admin\source\repos\arcanoid\arcanoid\Block.hpp(8,7): warning C4099: GameState: имя типа, ранее отображенное с помощью "struct", теперь отображено с помощью "class"
+  (компиляция исходного файла "Game.cpp")
+      C:\Users\admin\source\repos\arcanoid\arcanoid\GameState.hpp(5,8):
+       см. объявление "GameState"
+  
+  Создание кода...
+  arcanoid.vcxproj -> C:\Users\admin\source\repos\arcanoid\x64\Debug\arcanoid.exe

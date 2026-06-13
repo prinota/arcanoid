@@ -1,0 +1,48 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+Debug/
+Release/
+x64/
+x86/
+[Bb]in/
+[Oo]bj/
+
+# NuGet пакеты
+packages/
+
+# Скомпилированные файлы
+*.exe
+*.out
+*.o
+*.obj
+*.dll
+*.lib
+*.exp
+*.ilk
+*.pdb
+*.app
+
+# Временные файлы
+*.tmp
+*.swp
+*.swo
+*~
+.ipch/
+*.log
+
+# Папки IDE
+.vscode/
+.idea/
+CMakeFiles/
+CMakeCache.txt
+build/
+out/
+
+# SFML (если лежит локально)
+SFML/
